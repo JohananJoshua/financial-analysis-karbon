@@ -1,0 +1,147 @@
+/* Base styling for the entire page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+h1 span {
+    color: #007bff;
+    font-weight: 700;
+}
+
+/* Custom upload button styling */
+.upload-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-btn input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.upload-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.2);
+}
+
+.upload-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 8px 15px rgba(40, 167, 69, 0.2);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Styling for message display */
+.messages {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.messages li {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in animation for messages */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button hover animation */
+.upload-btn::before, .submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    transition: all 0.4s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.upload-btn:hover::before, .submit-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+/* Additional styling for responsive behavior */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+}
