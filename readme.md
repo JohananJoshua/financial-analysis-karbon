@@ -43,3 +43,14 @@ This project implements a financial analysis model that evaluates various financ
    ```bash
    python app.py
    ```
+
+   Screenshots:
+   ![uploading_file_ss](https://github.com/user-attachments/assets/6585ae37-0b2f-4c97-9438-b9cfc2d7b9a0)
+
+   ![uploade_page_ss](https://github.com/user-attachments/assets/c6657b36-069b-428f-afb0-fd970e17eba2)
+
+   ![results_page](https://github.com/user-attachments/assets/f4a5fd6e-db01-49d7-8fca-8bd1e2de6ff7)
+
+
+
+
